@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Awais Laal | AI Specialist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary: #7c3aed;
@@ -26,7 +24,7 @@
         }
 
         body {
-            font-family: 'Space Mono', monospace;
+            font-family: 'Courier New', Courier, monospace;
             background: var(--dark);
             color: var(--light);
             height: 100vh;
@@ -34,7 +32,6 @@
             position: relative;
         }
 
-        /* Flower Petals Animation */
         #petals {
             position: absolute;
             top: 0;
@@ -55,7 +52,6 @@
             pointer-events: none;
         }
 
-        /* Header with Animation */
         header {
             display: flex;
             justify-content: space-between;
@@ -74,7 +70,7 @@
         }
 
         .logo {
-            font-family: 'Syne', sans-serif;
+            font-family: 'Arial Black', sans-serif;
             font-weight: 800;
             font-size: 1.8rem;
             background: linear-gradient(90deg, var(--primary), var(--accent));
@@ -125,7 +121,6 @@
             width: 100%;
         }
 
-        /* Main Content - Centered */
         main {
             display: flex;
             justify-content: center;
@@ -134,7 +129,6 @@
             padding: 20px;
         }
 
-        /* Window Container */
         .window-container {
             width: 100%;
             max-width: 900px;
@@ -142,7 +136,6 @@
             position: relative;
         }
 
-        /* Window Styles */
         .window {
             position: absolute;
             top: 50%;
@@ -180,7 +173,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-family: 'Syne', sans-serif;
+            font-family: 'Arial Black', sans-serif;
             font-weight: 800;
         }
 
@@ -190,7 +183,6 @@
             overflow-y: auto;
         }
 
-        /* About Section */
         #about-window .window-content {
             display: flex;
             flex-direction: column;
@@ -304,7 +296,6 @@
             background: rgba(124, 58, 237, 0.1);
         }
 
-        /* Skills Section */
         #skills-window .window-content {
             display: flex;
             flex-direction: column;
@@ -354,7 +345,6 @@
             color: var(--accent);
         }
 
-        /* Projects Section */
         #projects-window .window-content {
             display: flex;
             flex-direction: column;
@@ -406,7 +396,6 @@
             color: var(--dark);
         }
 
-        /* Contact Section */
         #contact-window .window-content {
             display: flex;
             flex-direction: column;
@@ -427,19 +416,6 @@
             gap: 15px;
         }
 
-        .contact-item i {
-            font-size: 1.5rem;
-            color: var(--accent);
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(124, 58, 237, 0.1);
-            border-radius: 50%;
-        }
-
-        /* Footer - Simplified */
         footer {
             display: flex;
             justify-content: center;
@@ -463,6 +439,7 @@
             color: var(--light);
             font-size: 20px;
             transition: all 0.3s ease;
+            text-decoration: none;
         }
 
         .social-link:hover {
@@ -470,7 +447,6 @@
             transform: translateY(-3px);
         }
 
-        /* AI Assistant */
         #assistant-toggle {
             position: fixed;
             right: 30px;
@@ -491,11 +467,6 @@
 
         #assistant-toggle:hover {
             transform: scale(1.1);
-        }
-
-        #assistant-toggle i {
-            font-size: 24px;
-            color: white;
         }
 
         #chatbot {
@@ -521,7 +492,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-family: 'Syne', sans-serif;
+            font-family: 'Arial Black', sans-serif;
             font-weight: 800;
         }
 
@@ -566,23 +537,14 @@
             font-size: 14px;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* No Scrollbar */
         ::-webkit-scrollbar {
             display: none;
         }
     </style>
 </head>
 <body>
-    <!-- Flower Petals Animation -->
     <div id="petals"></div>
 
-    <!-- Header -->
     <header>
         <div class="logo">Portfolio</div>
         <nav>
@@ -595,36 +557,33 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
         <div class="window-container">
-            <!-- About Window -->
-            <div class="window" id="about-window">
+            <div class="window active" id="about-window">
                 <div class="window-header">
                     <div>about_me.exe</div>
                 </div>
                 <div class="window-content">
                     <div class="avatar-container">
-                        <img src="https://pngtree.com/freepng/avatar-of-a-blonde-man_13379585.html" alt="Muhammad Awais Laal" class="avatar">
+                        <img src="./avatar.png" alt="Muhammad Awais Laal" class="avatar">
                         <div class="status-dot"></div>
                     </div>
                     <h1>Muhammad Awais Laal</h1>
-                    <h2>Aispiring Generative AI Specialist </h2>
+                    <h2>Aspiring Generative AI Specialist</h2>
                     <p class="bio">
                         I specialize in <span class="highlight">Artificial Neural Networks</span> and <span class="highlight">Generative AI</span>, creating intelligent systems that push the boundaries of machine learning. With expertise in <span class="highlight">Computer Vision</span> and <span class="highlight">Sequence Modeling</span>, I build solutions that learn and adapt.
                     </p>
                     <div class="cta-buttons">
                         <button id="download-cv" class="btn btn-primary">
-                            <i class="fas fa-download"></i> Download CV
+                            Download CV
                         </button>
                         <button id="open-chatbot-btn" class="btn btn-outline">
-                            <i class="fas fa-robot"></i> AI Assistant
+                            AI Assistant
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Skills Window -->
             <div class="window" id="skills-window">
                 <div class="window-header">
                     <div>skills_stack.exe</div>
@@ -663,7 +622,6 @@
                 </div>
             </div>
 
-            <!-- Projects Window -->
             <div class="window" id="projects-window">
                 <div class="window-header">
                     <div>ai_projects.exe</div>
@@ -675,14 +633,14 @@
                             <h3>Churn Prediction Model</h3>
                             <p>Machine learning model that predicts customer churn with 92% accuracy.</p>
                             <button class="demo-btn" onclick="window.open('https://churn-modelling-krjyeyzuxok6lfkj7ddtyn.streamlit.app/', '_blank')">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
+                                Live Demo
                             </button>
                         </div>
                         <div class="project-card">
                             <h3>Salary Prediction</h3>
                             <p>Regression model that estimates salaries based on experience and location.</p>
                             <button class="demo-btn" onclick="window.open('https://salary-predection-4wblecbrpftv3tdy3verjp.streamlit.app/', '_blank')">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
+                                Live Demo
                             </button>
                         </div>
                         <div class="project-card">
@@ -705,7 +663,6 @@
                 </div>
             </div>
 
-            <!-- Contact Window -->
             <div class="window" id="contact-window">
                 <div class="window-header">
                     <div>contact_me.exe</div>
@@ -714,19 +671,19 @@
                     <h2 class="section-title">Contact Information</h2>
                     <div class="contact-info">
                         <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
+                            <span>Email:</span>
                             <span>awais@genai.dev</span>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
+                            <span>Phone:</span>
                             <span>+92 XXX XXXXXXX</span>
                         </div>
                         <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn:</span>
                             <span>linkedin.com/in/muhammad-awais-2a3450324</span>
                         </div>
                         <div class="contact-item">
-                            <i class="fab fa-github"></i>
+                            <span>GitHub:</span>
                             <span>github.com/muhammadawaislaal</span>
                         </div>
                     </div>
@@ -735,31 +692,17 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="social-links">
-            <a href="https://www.facebook.com/muhammadawaislaal/" class="social-link" target="_blank" title="Facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.fiverr.com/pooorman?public_mode=true" class="social-link" target="_blank" title="Fiverr">
-                <i class="fas fa-briefcase"></i>
-            </a>
-            <a href="https://github.com/muhammadawaislaal" class="social-link" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.instagram.com/muhammadawaislaal/" class="social-link" target="_blank" title="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/muhammad-awais-2a3450324/" class="social-link" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
+            <a href="https://www.facebook.com/muhammadawaislaal/" class="social-link" target="_blank" title="Facebook">FB</a>
+            <a href="https://www.fiverr.com/pooorman?public_mode=true" class="social-link" target="_blank" title="Fiverr">Fiverr</a>
+            <a href="https://github.com/muhammadawaislaal" class="social-link" target="_blank" title="GitHub">GitHub</a>
+            <a href="https://www.instagram.com/muhammadawaislaal/" class="social-link" target="_blank" title="Instagram">IG</a>
+            <a href="https://www.linkedin.com/in/muhammad-awais-2a3450324/" class="social-link" target="_blank" title="LinkedIn">LI</a>
         </div>
     </footer>
 
-    <!-- AI Assistant -->
-    <div id="assistant-toggle">
-        <i class="fas fa-robot"></i>
-    </div>
+    <div id="assistant-toggle">AI</div>
 
     <div id="chatbot">
         <div id="chatbot-header">
@@ -778,10 +721,8 @@
     </div>
 
     <script>
-        // Flower Petals Animation
         const petalsContainer = document.getElementById('petals');
         const petalCount = 15;
-        const colors = ['#7c3aed', '#10b981', '#f59e0b', '#6e45e2'];
 
         for (let i = 0; i < petalCount; i++) {
             const petal = document.createElement('div');
@@ -795,19 +736,16 @@
             petal.style.animationDuration = Math.random() * 10 + 5 + 's';
             petal.style.animationDelay = Math.random() * 5 + 's';
             petalsContainer.appendChild(petal);
-
             animatePetal(petal);
         }
 
         function animatePetal(petal) {
             const duration = parseFloat(petal.style.animationDuration) * 1000;
             const delay = parseFloat(petal.style.animationDelay) * 1000;
-            
             setTimeout(() => {
                 petal.style.transition = `all ${duration/1000}s linear`;
                 petal.style.top = '100vh';
                 petal.style.left = parseFloat(petal.style.left) + (Math.random() * 200 - 100) + 'px';
-                
                 setTimeout(() => {
                     petal.style.top = -20 + 'px';
                     petal.style.left = Math.random() * 100 + 'vw';
@@ -816,7 +754,6 @@
             }, delay);
         }
 
-        // Window Management
         const windows = document.querySelectorAll('.window');
         const navLinks = document.querySelectorAll('nav a');
         let currentWindow = document.getElementById('about-window');
@@ -827,7 +764,6 @@
                 e.preventDefault();
                 const windowId = link.getAttribute('data-window') + '-window';
                 const targetWindow = document.getElementById(windowId);
-                
                 if (targetWindow && targetWindow !== currentWindow) {
                     currentWindow.classList.remove('active');
                     targetWindow.classList.add('active');
@@ -836,7 +772,6 @@
             });
         });
 
-        // AI Assistant Toggle
         const assistantToggle = document.getElementById('assistant-toggle');
         const chatbot = document.getElementById('chatbot');
         const openChatbotBtn = document.getElementById('open-chatbot-btn');
@@ -851,7 +786,6 @@
         assistantToggle.addEventListener('click', toggleChatbot);
         openChatbotBtn.addEventListener('click', toggleChatbot);
 
-        // Chatbot Functionality
         const chatbotContent = document.getElementById('chatbot-content');
         const chatbotInput = document.getElementById('chatbot-input');
 
@@ -859,17 +793,12 @@
             if (e.key === 'Enter') {
                 const input = e.target.value.trim();
                 if (input === '') return;
-                
-                // Add user message
                 const userMessage = document.createElement('div');
                 userMessage.className = 'chat-message user-message';
                 userMessage.innerHTML = `<strong>You:</strong> ${input}`;
                 chatbotContent.appendChild(userMessage);
-                
-                // Process command
                 let response = '';
                 const lowerInput = input.toLowerCase();
-                
                 if (lowerInput.includes('project')) {
                     response = 'I have 10+ AI projects including:<br>- Churn Prediction Model<br>- Salary Prediction System<br>- Medical Image Diagnosis<br>- AI Voice Assistant<br>Check the Projects section for details!';
                 } else if (lowerInput.includes('skill')) {
@@ -883,8 +812,6 @@
                 } else {
                     response = "I'm trained to answer about:<br>- Projects<br>- Skills<br>- Contact<br>Try one of these topics!";
                 }
-                
-                // Simulate typing effect
                 setTimeout(() => {
                     const botMessage = document.createElement('div');
                     botMessage.className = 'chat-message bot-message';
@@ -892,20 +819,16 @@
                     chatbotContent.appendChild(botMessage);
                     chatbotContent.scrollTop = chatbotContent.scrollHeight;
                 }, 500);
-                
                 e.target.value = '';
                 chatbotContent.scrollTop = chatbotContent.scrollHeight;
             }
         });
 
-        // Download CV
         document.getElementById('download-cv').addEventListener('click', () => {
-            window.open('https://drive.google.com/file/d/13hVkm3JeGxusK2NRfAOZIL0kg_tryuD2/view?usp=drive_link', '_blank');
+            window.open('./cv.pdf', '_blank');
         });
 
-        // Window Resize Handler
         window.addEventListener('resize', () => {
-            // Reset petals on resize
             petalsContainer.innerHTML = '';
             for (let i = 0; i < petalCount; i++) {
                 const petal = document.createElement('div');
@@ -919,7 +842,6 @@
                 petal.style.animationDuration = Math.random() * 10 + 5 + 's';
                 petal.style.animationDelay = Math.random() * 5 + 's';
                 petalsContainer.appendChild(petal);
-
                 animatePetal(petal);
             }
         });
